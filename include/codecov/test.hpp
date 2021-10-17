@@ -17,5 +17,6 @@ inline std::ostream& more_awesome_but_not_covered( std::ostream& os, bool flag )
     return os << "hi, #2 from more_awesome\n";
   }
 }
+
 } // namespace amazing
 
