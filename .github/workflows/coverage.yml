@@ -18,10 +18,6 @@ jobs:
     - uses: codecov/codecov-action@v2
       with:
         files: ./lcov_filtered.info
-	flags: unittests
-	name: codecov-umbrella
-	fail_ci_if_error: true
-	verbose: true
     - name: Build amazing
       run: |
         mkdir build
