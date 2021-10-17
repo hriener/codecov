@@ -1,0 +1,7 @@
+add_library(amazing INTERFACE)
+target_include_directories(amazing INTERFACE ${PROJECT_SOURCE_DIR}/include)
+if (ENABLE_COVERAGE)
+  target_link_libraries(amazing INTERFACE gcov)
+else()
+  target_link_libraries(amazing INTERFACE)
+endif()
