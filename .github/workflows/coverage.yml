@@ -15,9 +15,6 @@ jobs:
     
     steps:
     - uses: actions/checkout@master
-    - uses: codecov/codecov-action@v2
-      with:
-        files: ./lcov_filtered.info
     - name: Build amazing
       run: |
         mkdir build
@@ -34,3 +31,7 @@ jobs:
         lcov -t "result" -o lcov.info -c -d .
         lcov -e lcov.info "*codecov/include*" -o lcov_filtered.info
         lcov -l lcov_filtered.info
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        files: ./lcov_filtered.info
