@@ -14,7 +14,8 @@ jobs:
     name: GNU GCC 9 and run coverage
     
     steps:
-    - uses: actions/checkout@master
+    - name: Checkout code
+      uses: actions/checkout@master
     - name: Build amazing
       run: |
         mkdir build
